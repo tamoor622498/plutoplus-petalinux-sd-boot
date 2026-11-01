@@ -1,0 +1,22 @@
+services:
+  petalinux:
+    image: plutoplus-petalinux:2019.1
+    build:
+      context: .
+      args:
+        USER_UID: "${LOCAL_UID:-1000}"
+        USER_GID: "${LOCAL_GID:-1000}"
+    user: builder
+    working_dir: /work
+    stdin_open: true
+    tty: true
+    volumes:
+      - type: bind
+        source: ../installers
+        target: /installers
+      - type: bind
+        source: ../tools
+        target: /tools
+      - type: bind
+        source: ../work
+        target: /work

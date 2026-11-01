@@ -1,0 +1,11 @@
+# Local Docker overrides
+/docker/.env
+# Downloaded PetaLinux installer and installed toolchain
+/installers/*.run
+/tools/
+# Future PetaLinux generated files (source/configuration remain trackable)
+/work/petalinux/build/
+/work/petalinux/images/
+/work/petalinux/components/
+/work/petalinux/.petalinux/
+/work/petalinux/.Xil/
